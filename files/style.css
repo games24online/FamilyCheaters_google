@@ -1,0 +1,664 @@
+/* General styles ================================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #000;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Additional classes ================================= */
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+/* Steps styles ================================ */
+.step {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.active {
+  display: flex;
+}
+
+.step1,
+.step2,
+.step3 {
+  position: relative;
+  overflow-y: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.step1 {
+  background-image: url("./img/bg-desktop1.jpg");
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+.step2 {
+  background: linear-gradient(113.91deg, #111536 -8.55%, #040410 109.14%);
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+.step3 {
+  background-image: url("./img/bg-desktop3.jpg");
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+/* Step content ============================== */
+.step__container {
+  width: min(100%, 1000px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 15px;
+  margin: 20px auto 60px;
+}
+
+.container-md {
+  width: min(100%, 1180px);
+}
+
+.container-lg {
+  width: min(100%, 1300px);
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content__bg {
+  width: 80%;
+  text-align: center;
+  border-radius: 2.75rem;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  padding: 15px 20px;
+  margin: 0px auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.step__title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 100%;
+  color: #fff;
+  text-shadow: 0px 4px 10px #000000;
+}
+
+.content__description {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 2.7rem;
+  line-height: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.step__title--color {
+  font-family: 'Roboto', sans-serif;
+  color: #0696D6;
+}
+
+.step__logo {
+  width: min(100%, 400px);
+  height: 60px;
+  margin: 0px auto;
+}
+
+.step__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.content__select-cards {
+  height: 100%;
+  margin-top: 50px;
+}
+
+/* Step cards ====================== */
+.cards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cards__item {
+  width: min(100%, 500px);
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 65);
+  border: 10px solid #05667B;
+  border-radius: 52px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.cards__item:nth-child(1) {
+  background: url(./img/card-img1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.cards__item:nth-child(2) {
+  background: url(./img/card-img2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.cards__title {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+}
+
+.cards__title span {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 2.75rem;
+  line-height: 100%;
+  display: inline-block;
+  color: #fff;
+  text-shadow: 0px 2px 2px #000000, 3px 0px 1px #000000, 4px -1px 2px #000000;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Step button ================================= */
+.step__buttons {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.step__button {
+  width: min(100%, 300px);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background: #0696D6;
+  border-radius: 12px;
+  transition: all .5s;
+}
+
+.step__button-last {
+  margin: 30px auto 0;
+}
+
+.step__button:hover,
+.cards__title a:hover {
+  transform: scale(.9);
+  transition: all .5s;
+}
+
+.btn {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 100%;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-shadow: 0px 0px 16px rgb(0 0 0 / 32%);
+  text-transform: uppercase;
+  border-radius: 12px;
+  text-align: center;
+  padding: 20px 0px;
+  transition: all .5s;
+  margin: 0 auto;
+}
+
+.step__button a:is(:active, :focus, :focus-visible) {
+  outline: none;
+}
+
+/* Media queries ================================ */
+@media screen and (max-width: 1600px) {
+  .step__title {
+    font-size: 2.5rem;
+  }
+
+  .cards__title span {
+    font-size: 2rem;
+    line-height: 1;
+    text-shadow: 0px 2px 2px #000000, 3px 0px 1px #000000, 4px -1px 2px #000000;
+  }
+
+  .step__button {
+    width: min(100%, 300px);
+  }
+
+  .step3 .step__button {
+    width: min(100%, 450px);
+  }
+
+  .btn {
+    font-size: 1.56rem;
+  }
+}
+
+@media (orientation: portrait) {
+  .step1 {
+    background-image: url("./img/mob/bg-mobile1.jpg");
+  }
+
+  .step3 {
+    background-image: url("./img/mob/bg-mobile3.jpg");
+  }
+
+  .content--mob {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 0px;
+    padding: 0px;
+  }
+
+  .content__bg {
+    padding: 15px 20px;
+  }
+
+  .step__logo {
+    width: min(100%, 250px);
+    height: 40px;
+  }
+
+  .content__select-cards {
+    margin-top: 0px;
+  }
+
+  .cards {
+    justify-content: space-around;
+  }
+
+  .cards__item {
+    margin: 0px auto;
+    height: calc(var(--vh, 1vh) * 100/2 - 80px);
+    cursor: pointer;
+  }
+
+  .cards__item:nth-child(1) {
+    background: url(./img/mob/card-img-mob1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    margin-bottom: 10px;
+    border-width: 5px;
+    border-radius: 24px;
+  }
+
+  .cards__item:nth-child(2) {
+    background: url(./img/mob/card-img-mob2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    border-width: 5px;
+    border-radius: 24px;
+  }
+
+  .cards__title {
+    width: min(100%, 200px);
+    margin: 0px auto;
+  }
+
+  .cards__title span {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    text-shadow: 0px 2px 2px #000000, 3px 0px 1px #000000, 2px 0px 2px #000000;
+  }
+
+  .content__description {
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .step2 .step__title {
+    margin-bottom: 15px;
+  }
+
+  .step__title {
+    line-height: 1;
+    font-size: 1rem;
+  }
+
+  .step__title--color {
+    font-size: 1.25rem;
+  }
+
+  .step__buttons {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .step3 .step__button.step__button-last {
+    width: min(100%, 400px);
+  }
+
+  .step__button {
+    width: min(100%, 300px);
+    padding: 4px;
+    margin-top: 10px;
+  }
+
+  .btn {
+    font-size: 1.125rem;
+    padding: 15px 0px;
+  }
+
+  .step__container {
+    width: min(100%, 800px);
+    margin: 20px auto 70px;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1200px) {
+  .step__cards.cards {
+    align-items: center;
+  }
+
+  .cards__item {
+    width: min(100%, 450px);
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 40);
+    cursor: pointer;
+  }
+
+  .cards__title {
+    width: 75%;
+    margin: 0px auto;
+  }
+
+  .content__description,
+  .step__title {
+    line-height: 1;
+    font-size: 1.6rem;
+  }
+}
+
+@media (orientation: landscape) and (max-height:657px) {
+
+  .container-md {
+    width: min(100%, 700px);
+  }
+
+  .step__container {
+    padding: 0 15px;
+    margin: 20px auto 40px;
+  }
+
+  .step2 .step__container {
+    padding: 0 15px;
+  }
+
+  .content__bg {
+    padding: 15px 20px;
+  }
+
+  .step1 .content__bg {
+    width: 55%;
+  }
+
+  .step__logo {
+    width: min(100%, 300px);
+    height: 60px;
+    margin: 0px auto 0;
+  }
+
+  .content__select-cards {
+    margin-top: 0;
+  }
+
+  .cards {
+    justify-content: space-evenly;
+  }
+
+  .cards__item {
+    width: min(100%, 370px);
+    height: calc(var(--vh, 1vh) * 50);
+    border-width: 5px;
+    border-radius: 24px;
+    cursor: pointer;
+    margin: 0;
+  }
+
+  .cards__item:nth-child(1) {
+    background: url(./img/mob/card-img-mob1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+
+  .cards__item:nth-child(2) {
+    background: url(./img/mob/card-img-mob2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+
+  .cards__title {
+    width: min(100%, 200px);
+    margin: 0px auto;
+  }
+
+  .cards__title span {
+    font-size: 1.25rem;
+    text-shadow: 0px 2px 2px #000000, 3px 0px 1px #000000, 2px 0px 2px #000000;
+  }
+
+  .step2 .step__title {
+    margin-bottom: 15px;
+  }
+
+  .content__description,
+  .step__title {
+    line-height: 1;
+    font-size: 1.6rem;
+  }
+
+  .step__buttons {
+    justify-content: space-evenly;
+  }
+
+  .step3 .step__button.step__button-last {
+    width: min(50%, 100%);
+  }
+
+  .step__button {
+    width: min(100%, 220px);
+  }
+
+  .btn {
+    font-size: 1.25rem;
+    padding: 15px 0px;
+  }
+
+}
+
+@media (orientation: landscape) and (max-height: 480px) {
+  .cards {
+    justify-content: space-evenly;
+  }
+
+  .cards__item {
+    width: min(100%, 285px);
+    height: calc(var(--vh, 1vh) * 60);
+    border-width: 5px;
+    border-radius: 24px;
+    cursor: pointer;
+    margin: 0;
+  }
+
+  .cards__item:nth-child(1) {
+    background: url(./img/mob/card-img-mob1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+
+  .cards__item:nth-child(2) {
+    background: url(./img/mob/card-img-mob2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+
+  .step3 .step__button.step__button-last {
+    width: min(50%, 100%);
+  }
+}
+
+@media (orientation: landscape) and (max-height: 330px) {
+
+  .content__bg {
+    width: 80%;
+    padding: 15px 20px;
+  }
+
+  .step__logo {
+    width: min(100%, 250px);
+  }
+
+  .step__title {
+    font-size: 1rem;
+  }
+
+  .cards {
+    justify-content: space-evenly;
+  }
+
+  .cards__item {
+    width: min(100%, 255px);
+    height: calc(var(--vh, 1vh) * 65);
+    border-width: 5px;
+    border-radius: 24px;
+    cursor: pointer;
+    margin: 0;
+  }
+
+  .cards__item:nth-child(1) {
+    background: url(./img/mob/card-img-mob1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+
+  .cards__item:nth-child(2) {
+    background: url(./img/mob/card-img-mob2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+
+  .cards__title {
+    width: min(100%, 175px);
+  }
+
+  .cards__title span {
+    font-size: .93rem;
+    margin-bottom: 10px;
+    text-shadow: 0px 2px 2px #000000, 3px 0px 1px #000000, 2px 0px 2px #000000;
+  }
+
+  .content__description {
+    font-size: .9rem;
+  }
+
+  .step__title--color {
+    font-size: 1rem;
+  }
+
+  .step__buttons {
+    justify-content: space-evenly;
+  }
+
+  .step3 .step__button.step__button-last {
+    width: min(50%, 100%);
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .content__bg--mob {
+    background: none;
+    backdrop-filter: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .step__logo {
+    width: min(100%, 200px);
+  }
+
+  .cards__item {
+    width: min(100%, 270px);
+    height: calc(var(--vh, 1vh) * 100/2 - 80px);
+    border-width: 5px;
+    border-radius: 24px;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+
+  .cards__item:nth-child(1) {
+    background: url(./img/mob/card-img-mob1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+
+  .cards__item:nth-child(2) {
+    background: url(./img/mob/card-img-mob2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+
+  .content__description {
+    font-size: .9rem;
+    padding: 5px;
+  }
+
+  .step__title--color {
+    font-size: 1rem;
+  }
+
+  .step__button {
+    width: min(100%, 250px);
+    margin: 10px auto;
+  }
+
+  .step3 .step__button {
+    margin: 30px auto 15px;
+  }
+}
