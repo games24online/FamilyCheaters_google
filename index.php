@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1.0">
   <meta http-equiv="Cache-control" content="public">
-  <title>Funn Games</title>
-  <meta name="description" content="Funn Games will make you play all night long.">
-  <meta name="keywords" content="exotic games, family cheaters, FunnGames, Funn Games">
+  <title>Family Cheaters</title>
+  <meta name="description" content="Family Cheaters will make you play all night long.">
+  <meta name="keywords" content="exotic games, family cheaters, Family Cheaters, Funn Games">
 
   <link rel="apple-touch-icon" sizes="180x180" href="./files/img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./files/img/favicon-32x32.png">
